@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Post2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "products": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/Products"
+      }
+    },
+    "version": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "pattern": "\\d+.\\d+"
+    },
+    "operating_system": {
+      "$ref": "#/definitions/OperatingSystem"
+    },
+    "technologies": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/Technology"
+      }
+    },
+    "topics": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/Topic"
+      }
+    },
+    "fun": {
+      "type": "boolean"
+    },
+    "hashtags": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "read_more": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "text": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "tweet": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "definitions": {
+    "Products": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "ReSharper",
+        "Rider",
+        "dotPeek",
+        "dotMemory",
+        "dotTrace",
+        "RiderFlow"
+      ],
+      "enum": [
+        "ReSharper",
+        "Rider",
+        "dotPeek",
+        "dotMemory",
+        "dotTrace",
+        "RiderFlow"
+      ]
+    },
+    "OperatingSystem": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "enum": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ]
+    },
+    "Technology": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "AspNet",
+        "Aws",
+        "Azure",
+        "Blazor",
+        "CSharp",
+        "FSharp",
+        "DotNet",
+        "Maui",
+        "Unity",
+        "Unreal"
+      ],
+      "enum": [
+        "AspNet",
+        "Aws",
+        "Azure",
+        "Blazor",
+        "CSharp",
+        "FSharp",
+        "DotNet",
+        "Maui",
+        "Unity",
+        "Unreal"
+      ]
+    },
+    "Topic": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Appearance",
+        "Completion",
+        "Data",
+        "Debugging",
+        "Editing",
+        "Inspections",
+        "Navigation",
+        "Profiling",
+        "Refactoring",
+        "Running",
+        "Testing",
+        "Vcs",
+        "Web"
+      ],
+      "enum": [
+        "Appearance",
+        "Completion",
+        "Data",
+        "Debugging",
+        "Editing",
+        "Inspections",
+        "Navigation",
+        "Profiling",
+        "Refactoring",
+        "Running",
+        "Testing",
+        "Vcs",
+        "Web"
+      ]
+    }
+  }
+}
